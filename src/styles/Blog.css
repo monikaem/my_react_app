@@ -1,0 +1,19 @@
+.articlesContainer {
+    display: flex;
+    flex-direction: row;
+}
+article {
+    width: 50%;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: justify;
+}
+
+article h3 {
+    padding-top: 15px;
+    margin: 0;
+}
+
+article h6 {
+   margin: 0;
+}

@@ -1,0 +1,37 @@
+nav {
+    height: 3%;
+    background-color: plum;
+    font-weight: bold;
+    letter-spacing: 1px;
+    min-height: 24px;
+}
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.liFromMenu {
+    list-style: none;
+    padding: 2px 40px;
+    width: 20%;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: solid 1px transparent;
+}
+.liFromMenu a {
+    text-decoration: none;
+    transition: .2ms;
+}
+
+.liFromMenu a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.active {
+    border-bottom: fuchsia solid 5px;
+    color: white;
+}
+
+
