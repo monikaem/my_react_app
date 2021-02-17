@@ -3,16 +3,21 @@ import {ProductsContext} from "../ProductsContext";
 
 
 
-const ProductInOffert = (props) => {
-    const { name, price, id } = props.product;
-    const { addToBasket } = useContext(ProductsContext)
+const ProductInOffert = () => {
 
+    const { products, addToBasket } = useContext(ProductsContext)
+
+
+    const productsListOffert = products.map(product => {
+        return <li style={{fontWeight: "bold"}} key={product.id}>{product.name}, <span>cena: {product.price} PLN</span>
+            <button onClick={() => addToBasket(product.id)}>Kupuję!</button>
+        </li>
+    })
 
     return (
-    <li>{name}, <span>cena kursu: {price} PLN</span>
-        <button onClick={() => addToBasket(id)}>Kupuję!</button>
-    </li>
-
+        <>
+        {productsListOffert}
+        </>
     )
 };
 

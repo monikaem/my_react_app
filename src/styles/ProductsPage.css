@@ -1,12 +1,47 @@
 .productsContainer {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .offert, .inBasket {
     width: 50%;
 }
+.offert li, .inBasket li {
+    margin-left: 70px;
+}
 
 .offert h2, .inBasket h2 {
     text-align: center;
+    color: #FF6F00;
 }
+
+.basketList {
+    height: 400px;
+}
+
+.productsContainer button {
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: #757575 solid 1px;
+    background-color: white;
+    margin-top: 10px;
+    text-transform: uppercase;
+    transition-duration: 0.4s;
+}
+
+.productsContainer button:hover {
+    background-color: #BDBDBD;
+    color: white;
+}
+
+.amount {
+    color: #FF6F00;
+    margin-left: 20px;
+}
+
+.paymentContainer {
+    text-align: center;
+}
+

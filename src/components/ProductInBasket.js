@@ -3,17 +3,23 @@ import {ProductsContext} from "../ProductsContext";
 
 
 
-const ProductInBasket = (props) => {
-    const { name, price, id } = props.product;
-    // const { addToBasket } = useContext(ProductsContext)
+const ProductInBasket = () => {
 
+    const { products, removeFromBasket } = useContext(ProductsContext);
+
+    const productsListInBasket = products.map(product => {
+        if (product.inBasket) {
+            return <li style={{fontWeight: "bold"}} key={product.id}>{product.name}, <span>cena: {product.price} PLN</span>
+                <button onClick={() => removeFromBasket(product.id)}>Usuń</button></li>
+        }
+    })
 
     return (
-        <li>{name}, <span>cena kursu: {price} PLN</span>
-            <button>Usuń</button>
-        </li>
+        <>
+            {productsListInBasket}
+        </>
     )
-};
+}
 
 
 export default ProductInBasket;
