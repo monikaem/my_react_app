@@ -1,0 +1,12 @@
+.productsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.offert, .inBasket {
+    width: 50%;
+}
+
+.offert h2, .inBasket h2 {
+    text-align: center;
+}

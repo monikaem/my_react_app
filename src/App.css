@@ -1,11 +1,12 @@
 .App {
   font-family: "PT Sans";
   height: 100vh;
-  background-color: plum;
+  background-color: #BDBDBD;
   display: flex;
   flex-direction: column;
   width: 90%;
   margin: 0 auto;
-
 }
+
+
 

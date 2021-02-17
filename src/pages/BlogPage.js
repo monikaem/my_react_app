@@ -19,7 +19,7 @@ const BlogPage = () => {
             {articles.map(article => {
                 return <article key={article.id}>
                     <h3>{article.title}</h3>
-                    <h6 style={{color: 'gray'}}>{article.author}</h6>
+                    <h6 style={{color: '#FF6F00'}}>{article.author}</h6>
                     <p>{article.text} <a href={article.moreInfo}>Czytaj więcej</a> </p>
                 </article>
             })}

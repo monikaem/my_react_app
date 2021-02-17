@@ -1,0 +1,32 @@
+.mainForm {
+    text-align: center;
+}
+
+.mainForm input {
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background-color: #FAFAFA;
+    border: solid #E0E0E0 1px;
+}
+.mainForm input:hover {
+    border: solid 1px #BDBDBD;
+}
+.ageInput {
+    margin-left: 20px;
+    width: 30px;
+}
+.nameInput, .mailInput {
+    margin-right: 20px;
+}
+.mainForm button {
+    padding: 10px 20px;
+    border: #757575 solid 2px;
+    background-color: white;
+    transition-duration: 0.4s;
+    text-transform: uppercase;
+}
+
+.mainForm button:hover {
+    background-color: #BDBDBD;
+    color: white;
+}
