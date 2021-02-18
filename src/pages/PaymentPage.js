@@ -11,7 +11,7 @@ const PaymentPage = () => {
 
     const orderSummary = () => {
         const productsInBasket = products.filter(product => product.inBasket);
-        return productsInBasket.reduce((accumulator, product) => accumulator + product.price, 0);
+        return productsInBasket.reduce((accumulator, product) => accumulator + (product.price * product.orderedAmount), 0);
     }
 
     const { permission, changePermission } = useContext(ProductsContext);
