@@ -1,8 +1,10 @@
-footer p {
+footer {
+    padding: 10px 0;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 10px;
+    overflow: hidden;
+    background-color: #BDBDBD;
 }
-
-
 
 

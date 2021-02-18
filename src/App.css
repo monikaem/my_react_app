@@ -1,7 +1,6 @@
 .App {
   font-family: "PT Sans";
   height: 100vh;
-  background-color: #BDBDBD;
   display: flex;
   flex-direction: column;
   width: 90%;

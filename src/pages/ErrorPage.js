@@ -2,7 +2,7 @@ import React from 'react';
 
 const ErrorPage = () => {
     return (
-        <div>
+        <div style={{textAlign: 'center'}}>
             <h1>Strona nie istnieje</h1>
         </div>
     )

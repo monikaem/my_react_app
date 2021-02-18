@@ -45,6 +45,7 @@ const AppProvider = ({children}) => {
     const [permission, setPermission] = useState(false);
     const [people, setPeople] = useState([]);
     const [peopleFetched, setPeopleFetched] = useState(false);
+    const [paymentInput, setPaymentInput] = useState('');
 
     const addToBasket = (id) => {
         const productsList = [...products];
@@ -67,9 +68,11 @@ const AppProvider = ({children}) => {
 
     const dataFetchedOrNot = () => setPeopleFetched(true);
 
+    const handleChangePaymentInput = (e) => setPaymentInput(e.target.value);
+
 
     return (
-        <AppContext.Provider value={{ products, addToBasket, removeFromBasket, permission, changePermission, people, addPeopleFromAPI, dataFetchedOrNot, peopleFetched }}>
+        <AppContext.Provider value={{ products, addToBasket, removeFromBasket, permission, changePermission, people, addPeopleFromAPI, dataFetchedOrNot, peopleFetched, paymentInput, handleChangePaymentInput, setPaymentInput }}>
             {children}
         </AppContext.Provider>
     )
