@@ -8,13 +8,12 @@ import Header from "./Header";
 import Navigation from "./Navigation";
 import Page from "./Page";
 import Footer from "./Footer";
-import {ProductsContext} from "../ProductsContext";
-import ProductsProvider from "../ProductsContext";
+import AppProvider from "../AppContext";
 
 function App() {
   return (
       <Provider store={store}>
-          <ProductsProvider>
+          <AppProvider>
       <Router>
         <div className="App">
           <Header/>
@@ -23,7 +22,7 @@ function App() {
           <Footer/>
         </div>
       </Router>
-          </ProductsProvider>
+          </AppProvider>
       </Provider>
   );
 }

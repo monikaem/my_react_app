@@ -1,5 +1,5 @@
 import React, {useContext, useRef} from 'react';
-import {ProductsContext} from "../ProductsContext";
+import {AppContext} from "../AppContext";
 import '../styles/ProductsPage.css';
 import ProductInOffert from '../components/ProductInOffert';
 import ProductInBasket from "../components/ProductInBasket";
@@ -7,7 +7,7 @@ import {Redirect, Route} from "react-router";
 
 
 const ProductsPage = () => {
-    const { products, permission, changePermission } = useContext(ProductsContext)
+    const { products, permission, changePermission } = useContext(AppContext)
 
 
         const orderSummary = () => {

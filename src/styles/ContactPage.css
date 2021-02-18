@@ -1,0 +1,27 @@
+.peopleContainer {
+    overflow:hidden;
+    text-align: center;
+}
+
+.person {
+    float:left;
+    margin: 1%;
+    width:23%;
+    text-align: center;
+}
+
+.person p {
+    font-size: 12px;
+    margin: 5px;
+}
+
+.person h4 {
+    margin: 3px;
+    color: #FF6F00;
+}
+
+
+
+
+
+

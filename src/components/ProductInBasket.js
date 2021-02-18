@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import {ProductsContext} from "../ProductsContext";
+import {AppContext} from "../AppContext";
 
 
 
 const ProductInBasket = () => {
 
-    const { products, removeFromBasket } = useContext(ProductsContext);
+    const { products, removeFromBasket } = useContext(AppContext);
 
     const productsListInBasket = products.map(product => {
         if (product.inBasket) {

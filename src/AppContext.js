@@ -38,11 +38,13 @@ const productsInStock = [
     },
 ];
 
-export const ProductsContext = createContext();
+export const AppContext = createContext();
 
-const ProductsProvider = ({children}) => {
+const AppProvider = ({children}) => {
     const [products, setProducts] = useState(productsInStock);
     const [permission, setPermission] = useState(false);
+    const [people, setPeople] = useState([]);
+    const [peopleFetched, setPeopleFetched] = useState(false);
 
     const addToBasket = (id) => {
         const productsList = [...products];
@@ -58,15 +60,19 @@ const ProductsProvider = ({children}) => {
             productsList[id].inBasket = false;
             setProducts(productsList)
         }
-
     }
     const changePermission = () => setPermission(prev => !prev);
 
+    const addPeopleFromAPI = (peopleFromAPI) => setPeople(prevState => prevState.concat(peopleFromAPI));
+
+    const dataFetchedOrNot = () => setPeopleFetched(true);
+
+
     return (
-        <ProductsContext.Provider value={{ products, addToBasket, removeFromBasket, permission, changePermission }}>
+        <AppContext.Provider value={{ products, addToBasket, removeFromBasket, permission, changePermission, people, addPeopleFromAPI, dataFetchedOrNot, peopleFetched }}>
             {children}
-        </ProductsContext.Provider>
+        </AppContext.Provider>
     )
 };
 
-export default ProductsProvider;
+export default AppProvider;

@@ -1,20 +1,20 @@
 import React, {useContext} from 'react';
 import {Redirect, Route} from "react-router";
-import {ProductsContext} from "../ProductsContext";
+import {AppContext} from "../AppContext";
 import blikIMG from '../blik.png';
 import '../styles/PaymentPage.css';
 
 
 const PaymentPage = () => {
 
-    const { products } = useContext(ProductsContext);
+    const { products } = useContext(AppContext);
 
     const orderSummary = () => {
         const productsInBasket = products.filter(product => product.inBasket);
         return productsInBasket.reduce((accumulator, product) => accumulator + (product.price * product.orderedAmount), 0);
     }
 
-    const { permission, changePermission } = useContext(ProductsContext);
+    const { permission, changePermission } = useContext(AppContext);
     const handleClick = () => {
         setTimeout(changePermission, 1000);
     }

@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
-import {ProductsContext} from "../ProductsContext";
+import {AppContext} from "../AppContext";
 
 
 
 const ProductInOffert = () => {
 
-    const { products, addToBasket } = useContext(ProductsContext)
+    const { products, addToBasket } = useContext(AppContext)
 
 
     const productsListOffert = products.map(product => {
