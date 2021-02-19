@@ -1,7 +1,7 @@
 import React from "react";
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Provider} from 'react-redux';
-import '../App.css';
+import '../styles/App.css';
 import store from "../store";
 
 import Header from "./Header";
@@ -14,7 +14,7 @@ function App() {
   return (
       <Provider store={store}>
           <AppProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Header/>
           <Navigation/>
