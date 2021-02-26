@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Person.css';
 
 const Person = ({ person }) => {
 
