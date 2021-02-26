@@ -31,6 +31,7 @@ const ContactPage = () => {
     return (
         <div className="peopleContainer">
             <h1>Nasza ekipa specjalistów</h1>
+            <div className="underline"></div>
             <PeopleList/>
         </div>
     )
